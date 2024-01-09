@@ -19,7 +19,7 @@
         "name": "pin",
         "type": "integer",
         "default": 26
-    }]
+    }],
     "scratch_scope": "package",
     "options": [{
         "title": "Playlist configuration",
