@@ -9,6 +9,12 @@ from six import integer_types
 from hosted import config, node, device, monotonic_time
 from hosted.scheduler import verified_timezone, utc_to_local
 from hosted.p2p import OrderedEventGroup
+
+def log(message):
+    # Simple log function to print the message
+    print(message)
+
+
 class TVPower(object):
     def __init__(self):
         log('Turning screen on')
