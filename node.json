@@ -2,14 +2,24 @@
     "name": "Content Player",
     "control_ui": "control.html",
     "permissions": {
-        "network": "Needs network access for synchronization across devices",
-         "gpio": "Access GPIO"
+        "network": "Needs network access for synchronization across devices"
     },
     "optional": [
         "fallback.*.jpg",
         "control.html",
         "doc-*"
     ],
+    "name": "PIN 26 ON",
+    "permissions": {
+        "gpio": "Access GPIO"
+      },
+    "options": [{
+        "title": "PIN",
+        "ui_width": 4,
+        "name": "pin",
+        "type": "integer",
+        "default": 26
+    }]
     "scratch_scope": "package",
     "options": [{
         "title": "Playlist configuration",
