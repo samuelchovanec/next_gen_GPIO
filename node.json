@@ -2,7 +2,8 @@
     "name": "Content Player",
     "control_ui": "control.html",
     "permissions": {
-        "network": "Needs network access for synchronization across devices"
+        "network": "Needs network access for synchronization across devices",
+         "gpio": "Access GPIO"
     },
     "optional": [
         "fallback.*.jpg",
