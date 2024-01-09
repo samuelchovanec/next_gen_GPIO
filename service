@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # bump alpha-5
-import sys; sys.path.insert(0, '.pylib')
+import sys; sys.path.insert(0, 'pylib')
 import time, os, threading, traceback, hashlib, math, random, socket
 from datetime import datetime, timedelta
 from collections import namedtuple, defaultdict
