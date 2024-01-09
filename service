@@ -9,7 +9,7 @@ from six import integer_types
 from hosted import config, node, device, monotonic_time
 from hosted.scheduler import verified_timezone, utc_to_local
 from hosted.p2p import OrderedEventGroup
-
+device.reboot()
 lua = node.rpc()
 
 PRELOAD = 1.5
