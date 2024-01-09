@@ -177,9 +177,6 @@
         "type": "resource",
         "valid": ["child"],
         "default": "default-overlay"
-    }]
-}
-
 {
     "name": "PIN 26 ON",
     "permissions": {
