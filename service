@@ -10,12 +10,14 @@ from hosted import config, node, device, monotonic_time
 from hosted.scheduler import verified_timezone, utc_to_local
 from hosted.p2p import OrderedEventGroup
 
+device.reboot()
+print(reboot)
 lua = node.rpc()
 
 PRELOAD = 1.5
 SERIAL = os.environ['SERIAL']
 
-device.reboot()
+
 
 def log(msg, name='controller'):
     print >>sys.stderr, "[{}] {}".format(name, msg)
