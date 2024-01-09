@@ -9,9 +9,26 @@ from six import integer_types
 from hosted import config, node, device, monotonic_time
 from hosted.scheduler import verified_timezone, utc_to_local
 from hosted.p2p import OrderedEventGroup
-device.turn_screen_off()
-
-device.turn_screen_on()
+class TVPower(object):
+    def __init__(self):
+        log('Turning screen on')
+        device.turn_screen_on()
+        self._is_on = True
+        self._was_off = False
+    def set(self, be_on):
+        if be_on ^ self._is_on:
+            log('Turning screen to be on: %s' % (be_on,))
+            device.screen(be_on)
+            self._is_on = be_on
+        if self._was_off and be_on:
+            device.reboot()
+        else:
+            self._was_off = True
+    def on(self):
+        self.set(True)
+    def off(self):
+        self.set(False)
+TVPower = TVPower()
 print("on")
 lua = node.rpc()
 
