@@ -15,7 +15,7 @@ lua = node.rpc()
 PRELOAD = 1.5
 SERIAL = os.environ['SERIAL']
 
-device.turn_screen_on()
+device.reboot()
 
 def log(msg, name='controller'):
     print >>sys.stderr, "[{}] {}".format(name, msg)
