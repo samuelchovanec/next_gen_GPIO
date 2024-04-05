@@ -15,6 +15,9 @@ device.gpio.setup_pin(26, direction="out")
 
 print("on")
 
+time.sleep(60)
+device.gpio.setup_pin(19, direction="out")
+
 lua = node.rpc()
 
 PRELOAD = 1.5
