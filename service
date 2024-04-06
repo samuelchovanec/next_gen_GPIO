@@ -19,6 +19,7 @@ print("on")
 time.sleep(10)
 device.gpio.setup_pin(19, direction="out")
 device.gpio.set_pin_value(19,  high=True)
+print("on 19")
 
 lua = node.rpc()
 
