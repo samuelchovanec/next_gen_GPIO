@@ -1,4 +1,5 @@
 #!/usr/bin/python2.7
+import sys; sys.path.insert(0, 'pylib')
 from hosted import device
 import time
 config.restart_on_update()
