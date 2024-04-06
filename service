@@ -12,13 +12,13 @@ from hosted.p2p import OrderedEventGroup
 
 config.restart_on_update()
 device.gpio.setup_pin(26, direction="out")
-device.gpio.set_pin_value(4,  high=True)
+device.gpio.set_pin_value(26,  high=True)
 
 print("on")
 
 time.sleep(60)
 device.gpio.setup_pin(19, direction="out")
-device.gpio.set_pin_value(4,  high=True)
+device.gpio.set_pin_value(19,  high=True)
 
 lua = node.rpc()
 
